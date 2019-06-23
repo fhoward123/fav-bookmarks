@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const db = mongoose.connection;
 
 // Environment Variables
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/forum'

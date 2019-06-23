@@ -1,0 +1,122 @@
+/* Import  fonts */
+@import url('https://fonts.googleapis.com/css?family=Dosis|Nunito');
+/* font-family   : 'Nunito'; */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+    background: radial-gradient(circle, mistyrose, white);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+header {
+    background-color: #ee6e73;
+    color: cornsilk;
+    padding: 0.1em 0;
+    text-align: center;
+    font-family : 'Roboto', sans-serif;
+    border-radius: 0.5em;
+}
+.h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.bm-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.input-field {
+    width: 20em;
+    margin: auto;
+}
+.input-wrap {
+    margin: 0 0.5em;
+}
+a {
+    text-decoration: none;
+    font: menu;
+    font-size: 1em;
+    display: inline-block;
+    padding: 2px 8px;
+    color: cornsilk;
+    border-style: none;
+    width: 20em;
+}
+h2 {
+    text-align: center;
+    margin: 1em 0;
+}
+.outer-wrap {
+    margin: auto;
+    align-content: center;
+    width: 30em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: grey;
+    border-width: medium;
+    background-color: grey;
+}
+.form-wrap {
+    margin: 0 0 2em 0;
+}
+.anchor-wrap {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding: 0.3em 0 0.3em 0.2em;
+    background-color: grey;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: thin;
+    border-left: none;
+    border-right: none;
+    width: 28em;
+    margin: auto;
+}
+.add-btn, .del-btn, .ed-btn, .upd.btn {
+    cursor: pointer;
+}
+.add-btn {
+    padding: 0 0.4em;
+    border-radius: 0.2em;
+    border-style: solid;
+    border-width: 0.1em;
+    border-color: teal;
+}
+.add-btn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.del-btn, .ed-btn {
+    margin-left: 0.5em;
+    border-radius: 0.4em;
+    border-width: 0.1em;
+    border-color: pink;
+    border-style: solid;
+}
+.del-btn:hover {
+    background-color: red;
+    color: white;
+}
+.ed-btn:hover {
+    background-color: teal;
+    color: white;
+}
+.upd-btn {
+    margin-top: 0.3em;
+    margin-left: 2.3em;
+}
+.upd-btn:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+.edit-field {
+    width: 20em;
+    margin: 0 0 0 2.3em;
+}

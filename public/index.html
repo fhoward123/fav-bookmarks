@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="BookmarkApp">
+    <head>
+        <meta charset="utf-8">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="../css/main.css">
+        <!-- Import AngularJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js"></script>
+        <!-- My script -->
+        <script src="../js/app.js" defer="defer" charset="utf-8"></script>
+        <title>My Bookmarks</title>
+    </head>
+    <body ng-controller="BookmarkController as bmCtrlr">
+        <header>
+            <h1>Bookmarks</h1>
+        </header>
+        <main>
+            <div class="form-wrap">
+                <form class="" ng-submit="bmCtrlr.createBookmark()">
+                    <div class="h2">
+                        <h2>Add a new bookmark</h2>
+                    </div>
+                    <div class="bm-container">
+                        <div class="input-wrap">
+                            <input class="input-field" type="text" ng-model="bmCtrlr.title" placeholder="website name" />
+                        </div>
+                        <div class="input-wrap">
+                            <input class="input-field" type="text" ng-model="bmCtrlr.url" placeholder="URL" />
+                        </div>
+                        <div class="">
+                            <input class="add-btn"type="submit" value="Add!"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="outer-wrap">
+                <div class="anchor-wrap" ng-repeat="bookmark in bmCtrlr.allBookmarks | orderBy:'title'">
+                    <a target="_blank" href="http://{{bookmark.url}}"><span class="bm">{{bookmark.title}}</span></a>
+                    <button ng-hide="$index === bmCtrlr.indexOfBookmarkToEdit" class="ed-btn" type="button" name="button" ng-click="bmCtrlr.indexOfBookmarkToEdit = $index">Edit</button>
+                    <button ng-hide="$index === bmCtrlr.indexOfBookmarkToEdit" class="del-btn"type="button" name="button" ng-click="bmCtrlr.deleteBookmark(bookmark._id)">Delete</button>
+                    <form ng-if="$index === bmCtrlr.indexOfBookmarkToEdit" ng-submit="bmCtrlr.editBookmark(bookmark);">
+                        <input class="edit-field" type="text" ng-model="bookmark.newTitle" placeholder="{{bookmark.title}}" />
+                        <input class="edit-field" type="text" ng-model="bookmark.newUrl" placeholder="{{bookmark.url}}" />
+                        <input class="ed-btn upd-btn" type="submit" value="Update Bookmark">
+                    </form>
+                </div
+            </div>
+        </main>
+    </body>
+</html>
